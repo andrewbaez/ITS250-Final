@@ -27,11 +27,11 @@ public class PatientTest {
 		String lastName = input.next();
 		//Ask Question 3
 		System.out.println("What is your height in inches?");
-		double height = input.nextDouble();
+		int height = input.nextInt();
 		double heightMeters = height * METERPERINCH;
 		//Ask Question 4
 		System.out.println("What is your weight in pounds?");
-		double weight = input.nextDouble();
+		int weight = input.nextInt();
 		double weightKilo = weight * POUNDPERKILO;
 		//BMI
 		//Converting entered information (height and weight) to Metric Units using arithmetical operators, the constant variables and String to Int conversion
@@ -89,15 +89,19 @@ public class PatientTest {
 		//Exit Switch
 		System.exit(0);
 		}
-		//Ask a question to use conditional operator
+		//Ask a question
 		System.out.println();
 		System.out.println("Let us finish collecting your information.");
 		System.out.println("How old are you?");
 		int age = input.nextInt();
 		System.out.println("You have entered that your age is " + age + ".");
-		String dependent = (age >= 18) ? "independent": "dependent";
-		System.out.println("Based on your answer, you are declared a(n) " + dependent + ".");
+		//Create an object
+		ageThis obj = new ageThis();
+		obj.setAge(age);
+		obj.showAge();
 		//Close scanner inputs
 		input.close();
+		//End Program
+		System.out.println("Thank you for using this program. Goodbye.");
 	}
 }
