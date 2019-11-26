@@ -1,3 +1,7 @@
+//Andrew Baez
+//ITS 250 - Fall 2019
+//https://github.com/andrewbaez/ITS250-Final
+
 package finalProject;
 import java.util.*;
 public class PatientTest {
